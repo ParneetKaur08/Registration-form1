@@ -1,0 +1,10 @@
+import mysql.connector
+mydb=mysql.connector.connect(host='localhost',user='root',password='12345')
+
+mycursor=mydb.cursor()
+mycursor.execute('CREATE DATABASE employee')
+mycursor.execute('CREATE DATABASE producer')
+mycursor.execute('CREATE DATABASE consumer')
+
+for x in mycursor:
+    print(x)
