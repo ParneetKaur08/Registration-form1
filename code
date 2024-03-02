@@ -1,1 +1,88 @@
+from tkinter import *
+root=Tk()
+
+l1=Label(root,text='username')
+l1.grid(row=0,column=0)
+l2=Label(root,text='password')
+l2.grid(row=1,column=0)
+e1=Entry(root)
+e1.grid(row=0,column=1)
+e2=Entry(root)
+e2.grid(row=1,column=1)
+
+def f2():
+    root=Toplevel()
+    def hello1 ():
+        print(e1.get())
+        print(e2.get())
+        print(e3.get())
+        print(e4.get())
+    def hello():
+        if(i.get()==1):
+            print('male')
+        else:
+            print('female')
+    def hi():
+        if(i.get()==1):
+            print('c')
+        else:
+            print('c++')
+            
+    def final():
+        hello1()
+        hi()
+        hello()
+        
+    l1=Label(root,text='Registration Form')
+    l1.grid(row=0,column=2)
+    l2=Label(root,text='FirstName')
+    l2.grid(row=1,column=0)
+    l3=Label(root,text='LastName')
+    l3.grid(row=1,column=2)
+    l4=Label(root,text='RollNo')
+    l4.grid(row=2,column=0)
+    l5=Label(root,text='ContactNo')
+    l5.grid(row=2,column=2)
+    e1=Entry(root)
+    e1.grid(row=1,column=1)
+    e2=Entry(root)
+    e2.grid(row=2,column=1)
+    e3=Entry(root)
+    e3.grid(row=1,column= 3)
+    e4=Entry(root)
+    e4.grid(row=2,column= 3)
+    l5=Label(root,text='gender')
+    l5.grid(row=3,column=0)
+    l6=Label(root,text='course')
+    l6.grid(row=4,column=0)
+    i=IntVar()
+    r1=Radiobutton(root,text='male',value=1,variable=i)
+    r1.grid(row=3,column=1)
+    r2=Radiobutton(root,text='female',value=2,variable=i)
+    r2.grid(row=3,column=3)
+    i=IntVar()
+    c1=Checkbutton(root,text='c',onvalue=1,variable=i)
+    c1.grid(row=4,column=1)
+    c2=Checkbutton(root,text='c++',onvalue=2,variable=i)
+    c2.grid(row=4,column=3)
+    c3=Checkbutton(root,text='java',onvalue=3,variable=i)
+    c3.grid(row=4,column=5)
+    b1=Button(root,text='submit',command=final)
+    b1.grid(row=7,column=2)
+         
+
+   
+    
+    
+def f1():
+    if(e1.get()=='abc'):
+        if(e2.get()=='1234'):
+            f2()
+        else:
+            print('invalid password')
+    else:
+        print('invalid usrname')
+b2=Button(root,text='submit',command=f1)
+b2.grid(row=2,column=1)
+root.mainloop()
 
